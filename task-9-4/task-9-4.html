@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Task four</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <fieldset>
+        <legend>Choose three options:</legend>
+      
+        <div>
+          <input type="checkbox" class="checkboxOption" id="firstCheckbox" name="firstCheckbox"/>
+          <label for="firstCheckbox">First</label>
+        </div>
+      
+        <div>
+            <input type="checkbox" class="checkboxOption" id="secondCheckbox" name="secondCheckbox"/>
+            <label for="secondCheckbox">Second</label>
+        </div>
+
+        <div>
+            <input type="checkbox" class="checkboxOption" id="thirdCheckbox" name="thirdCheckbox"/>
+            <label for="thirdCheckbox">Third</label>
+        </div>
+
+        <div>
+            <input type="checkbox" class="checkboxOption" id="fourthCheckbox" name="fourthCheckbox"/>
+            <label for="fourthCheckbox">Fourth</label>
+        </div>
+
+        <div>
+            <input type="checkbox" class="checkboxOption" id="fifthCheckbox" name="fifthCheckbox"/>
+            <label for="fifthCheckbox">Fifth</label>
+        </div>
+
+        <div>
+            <input type="checkbox" class="checkboxOption" id="sixthCheckbox" name="sixthCheckbox"/>
+            <label for="sixthCheckbox">Sixth</label>
+        </div>
+    </fieldset>
+      
+    <script>
+        $(document).ready(function () {
+            $(".checkboxOption").change(function () {
+                let checkedOption = $(".checkboxOption:checked").length;
+                if (checkedOption === 3) {
+                    $(".checkboxOption").prop("disabled", true);
+                }
+            })
+        });
+    </script>
+</body>
+</html>
